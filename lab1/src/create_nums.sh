@@ -1,0 +1,1 @@
+for i in $(seq 150); do cat /dev/urandom|od -N2 -An -i >> numbers.txt;done
