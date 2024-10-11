@@ -9,3 +9,14 @@ lab2/src/revert_string/static/revert_string.o
 lab2/src/swap/swap
 lab2/src/tests/tests.o
 lab2/src/tests/use-shared-library
+lab3/src/data_0.txt
+lab3/src/data_1.txt
+lab3/src/data_2.txt
+lab3/src/data_3.txt
+lab3/src/exec
+lab3/src/find_min_max.o
+lab3/src/parallel_min_max
+lab3/src/parallel_min_max1
+lab3/src/sequential_min_max
+lab3/src/sequential_min_max1
+lab3/src/utils.o
