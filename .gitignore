@@ -1,0 +1,11 @@
+lab2/src/revert_string/revert_string
+lab2/src/revert_string/main.o
+lab2/src/revert_string/statically-linked
+lab2/src/revert_string/use-shared-library
+lab2/src/revert_string/shared/librevert.so
+lab2/src/revert_string/shared/revert_string.o
+lab2/src/revert_string/static/librevert.a
+lab2/src/revert_string/static/revert_string.o
+lab2/src/swap/swap
+lab2/src/tests/tests.o
+lab2/src/tests/use-shared-library
