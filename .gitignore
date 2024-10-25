@@ -28,3 +28,7 @@ lab4/src/static/libsum.a
 lab4/src/task1/parallel_min_max_timeout
 lab4/src/task1/utils.o
 lab4/src/task2/zombie
+lab5/src/deadlock
+lab5/src/factorial
+lab5/src/mutex
+lab5/src/mutex_off
