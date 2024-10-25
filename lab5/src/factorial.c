@@ -24,7 +24,7 @@ void *ThreadFact(void *args) {
     for (int i = fact_args->begin; i < fact_args->end; i++)
         fact *= i;
     pthread_mutex_unlock(&mut);
-    return;
+    return NULL;
 }
 
 int main(int argc, char **argv) {
