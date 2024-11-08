@@ -38,3 +38,7 @@ lab6/src/multimodulo.o
 lab6/src/server
 lab6/src/server.o
 lab6/src/static/libmultimodulo.a
+lab7/src/tcpclient
+lab7/src/tcpserver
+lab7/src/udpclient
+lab7/src/udpserver

@@ -7,17 +7,28 @@
 #include <sys/types.h>
 #include <unistd.h>
 
-#define BUFSIZE 100
 #define SADDR struct sockaddr
 #define SIZE sizeof(struct sockaddr_in)
 
 int main(int argc, char *argv[]) {
   int fd;
   int nread;
-  char buf[BUFSIZE];
+  int bufsize;
+  int port;
+  char *buf;
   struct sockaddr_in servaddr;
-  if (argc < 3) {
-    printf("Too few arguments \n");
+
+  if (argc < 4) {
+    printf("Usage: %s <IP-address> <Port> <Buffer Size>\n", argv[0]);
+    exit(1);
+  }
+
+  port = atoi(argv[2]);
+  bufsize = atoi(argv[3]);
+  buf = malloc(bufsize);
+
+  if (!buf) {
+    perror("Buffer allocation failed");
     exit(1);
   }
 
@@ -34,7 +45,7 @@ int main(int argc, char *argv[]) {
     exit(1);
   }
 
-  servaddr.sin_port = htons(atoi(argv[2]));
+  servaddr.sin_port = htons(port);
 
   if (connect(fd, (SADDR *)&servaddr, SIZE) < 0) {
     perror("connect");
@@ -42,13 +53,14 @@ int main(int argc, char *argv[]) {
   }
 
   write(1, "Input message to send\n", 22);
-  while ((nread = read(0, buf, BUFSIZE)) > 0) {
+  while ((nread = read(0, buf, bufsize)) > 0) {
     if (write(fd, buf, nread) < 0) {
       perror("write");
       exit(1);
     }
   }
 
+  free(buf);
   close(fd);
   exit(0);
 }
