@@ -32,3 +32,9 @@ lab5/src/deadlock
 lab5/src/factorial
 lab5/src/mutex
 lab5/src/mutex_off
+lab6/src/client
+lab6/src/client.o
+lab6/src/multimodulo.o
+lab6/src/server
+lab6/src/server.o
+lab6/src/static/libmultimodulo.a
